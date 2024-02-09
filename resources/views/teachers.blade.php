@@ -11,14 +11,18 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>
-                    {{ $welcome }}
-                </h1>
-                <div class="mt-3">
+                <h1>Dettagli Teachers classe 113</h1>
+                <ul>@foreach ($teachers_data as $teacher)
+                    <li class="list-unstyled" >
+                        {{ $teacher }}
+                    </li>
+                    @endforeach
+                    <div class="mt-3">
 
-                    <a href="{{ route("students")}}"><button class="btn btn-success">Info Studenti</button></a>
-                    <a href="{{ route("teachers")}}"><button class="btn btn-success">Info teachers</button></a>
-                </div>
+                        <a href="{{ route("home")}}"><button class="btn btn-success">Home</button></a>
+                        <a href="{{ route("students")}}"><button class="btn btn-success">Info studenti</button></a>
+                    </div>
+                </ul>
             </div>
         </div>
     </div>
